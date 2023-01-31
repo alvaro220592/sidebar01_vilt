@@ -5,17 +5,22 @@
         class="fixed bg-teal-600  text-white h-screen top-0 transition-all duration-500 p-3"
         :class="show ? 'sidebar_expanded' : 'sidebar_collapsed'"
     >
-        <span @click="$emit('close')" class="cursor-pointer w-full">
-            Fechar
-        </span>
+        <!-- <div class="text-end h-10 overflow-hidden">
+            <font-awesome-icon @click="$emit('close')" icon="fa-regular fa-circle-xmark" class="cursor-pointer mt-2 text-2xl ml-9 transition-all duration-500" :class="show ? '' : 'hidden'" />
+        </div> -->
 
         <!-- <slot></slot> -->
 
-            <ul class="mt-14 menu_ul overflow-x-hidden">
+            <ul class="menu_ul overflow-x-hidden">
+                
+                <li class="block">
+                    <font-awesome-icon @click="this.$emit('toggle_sidebar')" icon="fa-solid fa-bars" class="mt-2 mb-10 cursor-pointer text-white text-2xl" />
+                </li>
+
                 <li class="block">
                     <div class="flex cursor-pointer" @click="dashboard_expanded = !dashboard_expanded">
-                        <font-awesome-icon icon="fa-solid fa-chart-simple" class="menu_li my-2 text-2xl" />
-                        <span class="my-2 mx-4" :class="show ? '' : 'hidden'">
+                        <font-awesome-icon icon="fa-solid fa-chart-simple" class="menu_li my-5 text-2xl" />
+                        <span class="my-5 mx-4" :class="show ? '' : 'hidden'">
                             Dashboard
                         </span>
                     </div>
@@ -41,8 +46,8 @@
 
                 <li class="block">
                     <div class="flex cursor-pointer" @click="cadastros_expanded = !cadastros_expanded">
-                        <font-awesome-icon icon="fa-solid fa-square-plus" class="menu_li my-2 text-2xl" />
-                        <span class="my-2 mx-4" :class="show ? '' : 'hidden'">
+                        <font-awesome-icon icon="fa-solid fa-square-plus" class="menu_li my-5 text-2xl" />
+                        <span class="my-5 mx-4" :class="show ? '' : 'hidden'">
                             Cadastros
                         </span>
                     </div>
@@ -67,8 +72,8 @@
 
                 <li class="block">
                     <div class="flex cursor-pointer" @click="configuracoes_expanded = !configuracoes_expanded">
-                        <font-awesome-icon icon="fa-solid fa-gear" class="menu_li my-2 text-2xl" />
-                        <span class="my-2 mx-4" :class="show ? '' : 'hidden'">
+                        <font-awesome-icon icon="fa-solid fa-gear" class="menu_li my-5 text-2xl" />
+                        <span class="my-5 mx-4" :class="show ? '' : 'hidden'">
                             Configurações
                         </span>
                     </div>
@@ -93,8 +98,8 @@
 
                 <li class="block">
                     <div class="flex cursor-pointer">
-                        <font-awesome-icon icon="fa-solid fa-power-off" class="menu_li my-2 text-2xl" />
-                        <span class="my-2 mx-4" :class="show ? '' : 'hidden'">
+                        <font-awesome-icon icon="fa-solid fa-power-off" class="menu_li my-5 text-2xl" />
+                        <span class="my-5 mx-4" :class="show ? '' : 'hidden'">
                             Sair
                         </span>
                     </div>
@@ -130,7 +135,7 @@
     }
 
     .sidebar_collapsed{
-        width: 46px;
+        width: 48px;
     }
 
     .menu_ul {

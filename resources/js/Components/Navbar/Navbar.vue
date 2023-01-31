@@ -1,13 +1,13 @@
 <template>
     <nav
-        class="flex bg-teal-500 p-3"
+        class="flex bg-teal-500 h-8"
     >
-        <button
+        <!-- <button
             class="bg-pink-300 px-4 py-2 rounded-md"
             @click="this.$emit('toggle_sidebar')"
         >
             <font-awesome-icon icon="fa-solid fa-bars" class="text-white text-2xl" />
-        </button>
+        </button> -->
     </nav>
 </template>
 

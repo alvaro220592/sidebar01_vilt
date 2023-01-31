@@ -17,7 +17,7 @@ const show = ref(false);
     <div class="flex w-full">
         <!-- container geral -->
 
-        <Sidebar :show="show" @close="show = false"></Sidebar>
+        <Sidebar :show="show" @close="show = false" @toggle_sidebar="show = !show"></Sidebar>
 
         <!-- Parte à direita da sidebar -->
         <section
@@ -28,8 +28,9 @@ const show = ref(false);
             
 
             <Navbar @toggle_sidebar="show = !show"></Navbar>
-            <!-- Div que dá blur na tela quando expande a sidebar -->
-            
+            <Navbar></Navbar>
+
+            <!-- Div que dá blur na tela quando expande a sidebar -->            
             <!-- ORIGINAL -->
             <!-- <div v-if="show" class="section_sidebar_expanded h-screen fixed top-0 right-0 bg-black/25 backdrop-blur"></div> -->
             
