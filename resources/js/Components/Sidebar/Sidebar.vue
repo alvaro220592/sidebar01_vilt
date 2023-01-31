@@ -11,7 +11,7 @@
 
         <!-- <slot></slot> -->
 
-            <ul class="mt-14 menu_ul">
+            <ul class="mt-14 menu_ul overflow-x-hidden">
                 <li class="block">
                     <div class="flex cursor-pointer" @click="dashboard_expanded = !dashboard_expanded">
                         <font-awesome-icon icon="fa-solid fa-chart-simple" class="menu_li my-2 text-2xl" />
