@@ -29,6 +29,11 @@ const show = ref(false);
 
             <Navbar @toggle_sidebar="show = !show"></Navbar>
             <!-- <div v-if="show" class="section_sidebar_expanded h-screen fixed top-0 right-0 bg-black/25 backdrop-blur"></div> -->
+            <!-- Div que dá blur na tela quando expande a sidebar -->
+            <div 
+                class="transition-all duration-500" 
+                :class="show ? 'fixed top-0 right-0 h-screen bg-black/25 backdrop-blur section_sidebar_expanded' : 'section_sidebar_collapsed'">
+            </div>
 
             <!-- Page Content -->
             <main>

@@ -20,6 +20,7 @@
                         </span>
                     </div>
                     <ul class="flex flex-col px-4" :class="dashboard_expanded && show ? '' : 'hidden'">
+                    <!-- <ul class="flex flex-col px-4"> -->
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
                             <span>teste</span>
@@ -136,5 +137,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+    }
+
+    .teste {
+        transition: 1s;
     }
 </style>
