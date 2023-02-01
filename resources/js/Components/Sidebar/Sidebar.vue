@@ -25,7 +25,7 @@
                             Dashboard
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="dashboard_expanded && show ? 'fadeIn' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="dashboard_expanded && show ? 'growDown' : 'hidden'">
                     <!-- <ul class="flex flex-col px-4"> -->
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
@@ -52,7 +52,7 @@
                             Cadastros
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="cadastros_expanded && show ? 'fadeIn' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="cadastros_expanded && show ? 'growDown' : 'hidden'">
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
                             <span>teste</span>
@@ -78,7 +78,7 @@
                             Configurações
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="configuracoes_expanded && show ? 'fadeIn' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="configuracoes_expanded && show ? 'growDown' : 'hidden'">
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
                             <span>teste</span>
@@ -129,9 +129,7 @@
 </script>
 
 <style scoped>
-    /* .navbar_sidebar_expanded {
-        width: 10px;
-    } */
+
     .sidebar_expanded{
         width: 180px;
     }
@@ -146,26 +144,20 @@
         justify-content: space-evenly;
     }
 
-    .fadeIn {
-        opacity: 1;
-        animation: fadeIn .3s;
+    .growDown {
+        animation: growDown .3s ease-in-out forwards;
+        transform-origin: top center
     }
 
-    @keyframes fadeIn {
-        0% { opacity: 0 }
-        100% { opacity: 1 }
-    }
-
-    /* testes */
-    .fadeOut {
-        opacity: 0;
-        animation: fadeOut .3s;
-        display: none;
-    }
-
-    /* testes */
-    @keyframes fadeOut {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
+    @keyframes growDown {
+        0% {
+            transform: scaleY(0)
+        }
+        /* 80% {
+            transform: scaleY(1.5)
+        } */
+        100% {
+            transform: scaleY(1)
+        }
     }
 </style>
