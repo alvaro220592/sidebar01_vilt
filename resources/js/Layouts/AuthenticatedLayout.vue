@@ -27,7 +27,7 @@ const show = ref(false);
             <!-- <div class="h-screen blur" :class="show ? '' : 'hidden'"></div> -->
             
 
-            <Navbar @toggle_sidebar="show = !show"></Navbar>
+            <!-- <Navbar @toggle_sidebar="show = !show"></Navbar> -->
             <Navbar></Navbar>
 
             <!-- Div que dá blur na tela quando expande a sidebar -->            

@@ -15,6 +15,7 @@
                 
                 <li class="block">
                     <font-awesome-icon @click="this.$emit('toggle_sidebar')" icon="fa-solid fa-bars" class="mt-2 mb-10 cursor-pointer text-white text-2xl" />
+                    <!-- <font-awesome-icon @click="show = !show" icon="fa-solid fa-bars" class="mt-2 mb-10 cursor-pointer text-white text-2xl" /> -->
                 </li>
 
                 <li class="block">
@@ -24,7 +25,7 @@
                             Dashboard
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="dashboard_expanded && show ? '' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="dashboard_expanded && show ? 'fadeIn' : 'hidden'">
                     <!-- <ul class="flex flex-col px-4"> -->
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
@@ -51,7 +52,7 @@
                             Cadastros
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="cadastros_expanded && show ? '' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="cadastros_expanded && show ? 'fadeIn' : 'hidden'">
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
                             <span>teste</span>
@@ -77,7 +78,7 @@
                             Configurações
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="configuracoes_expanded && show ? '' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="configuracoes_expanded && show ? 'fadeIn' : 'hidden'">
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
                             <span>teste</span>
@@ -144,7 +145,26 @@
         justify-content: space-evenly;
     }
 
-    .teste {
-        transition: 1s;
+    .fadeIn {
+        opacity: 1;
+        animation: fadeIn .3s;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0 }
+        100% { opacity: 1 }
+    }
+
+    /* testes */
+    .fadeOut {
+        opacity: 0;
+        animation: fadeOut .3s;
+        display: none;
+    }
+
+    /* testes */
+    @keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
     }
 </style>
