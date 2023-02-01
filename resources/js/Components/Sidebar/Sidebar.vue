@@ -25,7 +25,7 @@
                             Dashboard
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="dashboard_expanded && show ? 'growDown' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="dashboard_expanded && show ? 'dropDown' : 'hidden'">
                     <!-- <ul class="flex flex-col px-4"> -->
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
@@ -52,7 +52,7 @@
                             Cadastros
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="cadastros_expanded && show ? 'growDown' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="cadastros_expanded && show ? 'dropDown' : 'hidden'">
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
                             <span>teste</span>
@@ -78,7 +78,7 @@
                             Configurações
                         </span>
                     </div>
-                    <ul class="flex flex-col px-4" :class="configuracoes_expanded && show ? 'growDown' : 'hidden'">
+                    <ul class="flex flex-col px-4" :class="configuracoes_expanded && show ? 'dropDown' : 'hidden'">
                         <li class="flex flex-row">
                             <font-awesome-icon icon="fa-regular fa-snowflake" class="mx-2 my-1" />
                             <span>teste</span>
@@ -144,12 +144,12 @@
         justify-content: space-evenly;
     }
 
-    .growDown {
-        animation: growDown .3s ease-in-out forwards;
+    .dropDown {
+        animation: dropDown .3s ease-in-out forwards;
         transform-origin: top center
     }
 
-    @keyframes growDown {
+    @keyframes dropDown {
         0% {
             transform: scaleY(0)
         }
