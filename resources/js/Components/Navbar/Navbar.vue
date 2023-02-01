@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="flex bg-teal-500 h-8"
+        class="flex bg-teal-500 h-16"
     >
         <!-- <button
             class="bg-pink-300 px-4 py-2 rounded-md"
