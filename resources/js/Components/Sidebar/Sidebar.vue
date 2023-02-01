@@ -122,7 +122,8 @@
     })
 
     defineEmits([
-        'close'
+        'close',
+        'toggle_sidebar'
     ])
 
 </script>
